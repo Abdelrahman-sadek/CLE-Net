@@ -48,7 +48,7 @@ git --version
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/CLE-Net.git
+git clone https://github.com/Abdelrahman-sadek/CLE-Net.git
 cd CLE-Net
 ```
 
@@ -554,9 +554,9 @@ python -m unittest tests.test_integration -v --timeout=60
 
 If you encounter issues not covered here:
 
-1. Check the [GitHub Issues](https://github.com/yourusername/CLE-Net/issues)
+1. Check the [GitHub Issues](https://github.com/Abdelrahman-sadek/CLE-Net/issues)
 2. Review the [Documentation](docs/)
-3. Ask for help in the [Discussions](https://github.com/yourusername/CLE-Net/discussions)
+3. Ask for help in the [Discussions](https://github.com/Abdelrahman-sadek/CLE-Net/discussions)
 
 ---
 
@@ -643,7 +643,7 @@ After successfully deploying and testing CLE-Net:
 
 2. **Contribute**
    - Check the [Contributing Guidelines](CONTRIBUTING.md)
-   - Review [Open Issues](https://github.com/yourusername/CLE-Net/issues)
+   - Review [Open Issues](https://github.com/Abdelrahman-sadek/CLE-Net/issues)
 
 3. **Build on CLE-Net**
    - Develop custom modules

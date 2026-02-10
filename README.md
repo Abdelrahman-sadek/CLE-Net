@@ -357,7 +357,7 @@ This separation ensures:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/CLE-Net.git
+git clone https://github.com/Abdelrahman-sadek/CLE-Net.git
 cd CLE-Net
 
 # Install dependencies
@@ -914,8 +914,8 @@ CLE-Net is an exploration of that idea.
 
 ## Contact
 
-- **GitHub Issues**: [github.com/yourusername/CLE-Net/issues](https://github.com/yourusername/CLE-Net/issues)
-- **Discussions**: [github.com/yourusername/CLE-Net/discussions](https://github.com/yourusername/CLE-Net/discussions)
+- **GitHub Issues**: [github.com/Abdelrahman-sadek/CLE-Net/issues](https://github.com/Abdelrahman-sadek/CLE-Net/issues)
+- **Discussions**: [github.com/Abdelrahman-sadek/CLE-Net/discussions](https://github.com/Abdelrahman-sadek/CLE-Net/discussions)
 - **Email**: cle-net@example.com
 
 ---
