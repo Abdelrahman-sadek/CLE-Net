@@ -1,0 +1,9 @@
+Customer support interactions:
+- VIP customer called about 2-day delay. We waived the penalty since they're important.
+- VIP customer inquiry about billing. Important client, expedited response.
+- Regular customer complained about 1-day delay. Normal processing applies.
+- VIP account holder requested refund. Important client, special handling.
+- Standard customer asked for discount. Regular policy applies.
+- VIP member reported shipping issue. Priority treatment for important clients.
+- Regular customer waited 3 days. Standard escalation process.
+- VIP client called about delay. Since it's only 2 days, we can ignore.

@@ -1,0 +1,9 @@
+Policy notes:
+- For VIP clients, short delays (< 3 days) are typically overlooked.
+- Standard clients follow regular delay policies.
+- Important accounts get flexibility on minor delays.
+- VIP status means minor issues can be waived.
+- Regular customers: no automatic exceptions.
+- Premium clients: always consider their importance.
+- Normal processing for standard delays and regular customers.
+- VIP exceptions for short delays are documented here.

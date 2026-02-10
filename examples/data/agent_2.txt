@@ -1,0 +1,9 @@
+Sales call logs:
+- Premium customer with short delay. Account is VIP, so no penalty.
+- Standard client experiencing issues. Normal support channels.
+- VIP account holder, delay is minimal (less than 3 days). Exception granted.
+- High-priority client, important relationship. Flexibility allowed.
+- Regular customer, standard response time. No exceptions.
+- VIP enterprise account. Important client, expedited handling.
+- Standard retail customer, normal processing.
+- VIP client, short delay noted. Ignored per VIP policy.
