@@ -242,8 +242,7 @@ class TendermintBFT:
             consensus_hash=hashlib.sha256("consensus".encode()).hexdigest(),
             app_hash=hashlib.sha256("app".encode()).hexdigest(),
             last_results_hash=hashlib.sha256("results".encode()).hexdigest(),
-            evidence_hash=hashlib.sha256("evidence".encode()).hexdigest(),
-            proposer_address=proposer_address
+            evidence_hash=hashlib.sha256("evidence".encode()).hexdigest()
         )
         
         # Create block

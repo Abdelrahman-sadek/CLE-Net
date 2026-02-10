@@ -16,8 +16,10 @@ import json
 class StateTransition(Enum):
     """Types of state transitions."""
     LAW_PROPOSED = "law_proposed"
+    LAW_VALIDATING = "law_validating"
     LAW_VALIDATED = "law_validated"
     LAW_ACTIVATED = "law_activated"
+    LAW_ACTIVE = "law_active"
     LAW_CONFLICTED = "law_conflicted"
     LAW_DEPRECATED = "law_deprecated"
     LAW_REVOKED = "law_revoked"

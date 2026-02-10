@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Set
 from datetime import datetime
 import hashlib
 
-from ..types import (
+from ...types import (
     ValidatorInfo,
     ValidatorRole,
     CognitiveStateBlock,

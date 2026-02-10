@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from datetime import datetime
 import json
 
-from ..types import (
+from ...types import (
     CognitiveLaw,
     LawStatus,
     LawType,

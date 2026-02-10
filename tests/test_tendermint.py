@@ -337,8 +337,7 @@ class TestBlockHeader(unittest.TestCase):
             consensus_hash="consensus_hash",
             app_hash="app_hash",
             last_results_hash="last_results_hash",
-            evidence_hash="evidence_hash",
-            proposer_address="validator1"
+            evidence_hash="evidence_hash"
         )
         
         self.assertEqual(header.height, 1)
@@ -361,8 +360,7 @@ class TestBlockHeader(unittest.TestCase):
             consensus_hash="consensus_hash",
             app_hash="app_hash",
             last_results_hash="last_results_hash",
-            evidence_hash="evidence_hash",
-            proposer_address="validator1"
+            evidence_hash="evidence_hash"
         )
         
         header_dict = header.to_dict()
