@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  cle-net-node:
+    build: .
+    container_name: cle-net-node
+    ports:
+      - "26656:26656"  # P2P
+      - "26657:26657"  # RPC
+      - "1317:1317"    # REST API
+    volumes:
+      - ./data:/data
+      - ./config:/config
+    environment:
+      - CLE_NET_CHAIN_ID=cle-net-1
+      - CLE_NET_MODE=testnet
+    restart: unless-stopped
+    command: python scripts/start_testnet.py
+
+  cle-net-explorer:
+    image: node:18-alpine
+    container_name: cle-net-explorer
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./explorer:/app
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    depends_on:
+      - cle-net-node

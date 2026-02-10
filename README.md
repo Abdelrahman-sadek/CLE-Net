@@ -11,6 +11,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Quick Start](#quick-start)
 - [What is CLE-Net?](#what-is-cle-net)
 - [Core Concept: CLE](#core-concept-cle)
 - [Why a Network?](#why-a-network)
@@ -24,6 +25,7 @@
 - [Development Phases](#development-phases)
 - [Future Work](#future-work)
 - [Documentation](#documentation)
+- [Publishing & Distribution](#publishing--distribution)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -36,6 +38,107 @@
 CLE-Net is an experimental decentralized architecture for autonomous cognitive agents that extract, preserve, and evolve symbolic laws from human interaction — independent of any single machine, model, or operator.
 
 This project explores a new layer of AI systems: **cognition as distributed infrastructure**.
+
+---
+
+## Quick Start
+
+Get started with CLE-Net in 5 minutes!
+
+### Installation
+
+**Option 1: Using pip (Recommended)**
+```bash
+pip install cle-net
+```
+
+**Option 2: Using Docker**
+```bash
+docker pull abdelrahmansadek/cle-net:latest
+```
+
+**Option 3: From Source**
+```bash
+git clone https://github.com/Abdelrahman-sadek/CLE-Net.git
+cd CLE-Net
+pip install -r requirements.txt
+pip install -e .
+```
+
+### Your First Application
+
+```python
+from core.cosmos.app.app import CLENetApp, AppConfig, Message
+
+# Create configuration
+config = AppConfig(
+    chain_id="my-cle-net-1",
+    min_gas_prices="0.025ucle",
+    block_time=5.0
+)
+
+# Initialize the app
+app = CLENetApp(config)
+
+# Initialize the chain
+genesis_state = {
+    "accounts": [],
+    "validators": [],
+    "app_state": {}
+}
+app.init_chain(genesis_state)
+
+# Create and deliver a message
+message = Message(
+    type="test_message",
+    sender="user1",
+    data={"hello": "world"}
+)
+
+result = app.deliver_tx(message)
+print(f"Message delivered: {result}")
+
+# Begin a block
+block_header = {
+    "height": 1,
+    "hash": "block_hash_1",
+    "proposer": "user1",
+    "timestamp": "2024-01-01T00:00:00Z"
+}
+app.begin_block(block_header)
+
+# End and commit the block
+app.end_block()
+app.commit()
+
+print("Block committed successfully!")
+```
+
+### Running a Testnet Node
+
+**Using Docker:**
+```bash
+docker run -d \
+  --name cle-net-testnet \
+  -p 26656:26656 \
+  -p 26657:26657 \
+  -v $(pwd)/data:/data \
+  abdelrahmansadek/cle-net:latest \
+  python scripts/start_testnet.py
+```
+
+**Using Python:**
+```bash
+python scripts/start_testnet.py
+```
+
+### Next Steps
+
+- 📖 Read the [full documentation](https://cle-net.readthedocs.io)
+- 🚀 Check out the [Quick Start Guide](QUICKSTART.md)
+- 📦 Learn about [publishing and distribution](PUBLISHING.md)
+- 🧪 Run the [test suite](scripts/run_tests.py)
+- 💬 Join our [community discussions](https://github.com/Abdelrahman-sadek/CLE-Net/discussions)
 
 ---
 
@@ -841,6 +944,55 @@ Detailed design documents live in `/docs`:
 - [Whitepaper](docs/whitepaper/05_complete_whitepaper.md)
 - [Glossary](docs/glossary.md)
 - [Deployment and Testing Guide](DEPLOYMENT_AND_TESTING.md) - Step-by-step deployment and testing instructions
+- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
+- [Publishing Guide](PUBLISHING.md) - How to publish and distribute CLE-Net
+
+---
+
+## Publishing & Distribution
+
+CLE-Net can be published and distributed through multiple channels to reach different user groups:
+
+### Installation Options
+
+**PyPI (Python Package Index)**
+```bash
+pip install cle-net
+```
+
+**Docker Hub**
+```bash
+docker pull abdelrahmansadek/cle-net:latest
+```
+
+**From Source**
+```bash
+git clone https://github.com/Abdelrahman-sadek/CLE-Net.git
+cd CLE-Net
+pip install -e .
+```
+
+### Distribution Channels
+
+1. **PyPI** - For Python developers
+2. **Docker Hub** - For system administrators and DevOps
+3. **GitHub Releases** - For advanced users and contributors
+4. **Snap Store** - For Linux users
+5. **Homebrew** - For macOS users
+
+### Publishing Guide
+
+For detailed instructions on how to publish CLE-Net, see the [Publishing Guide](PUBLISHING.md), which covers:
+
+- PyPI publishing workflow
+- Docker image building and pushing
+- Documentation website setup
+- Release checklist
+- Maintenance procedures
+
+### Quick Start for Users
+
+New users should start with the [Quick Start Guide](QUICKSTART.md) to get up and running in 5 minutes.
 
 ---
 
