@@ -26,23 +26,19 @@
 <table>
 <tr>
 <td align="center" width="25%">
-<img src="https://raw.githubusercontent.com/Abdelrahman-sadek/CLE-Net/main/.github/icons/brain.svg" width="60" height="60" alt="Cognitive" onerror="this.style.display='none'"/>
-<br><b>Cognitive Discovery</b><br>
+<br>🧠 <b>Cognitive Discovery</b><br>
 <sub>Discovers implicit rules from human interaction</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://raw.githubusercontent.com/Abdelrahman-sadek/CLE-Net/main/.github/icons/network.svg" width="60" height="60" alt="Decentralized" onerror="this.style.display='none'"/>
-<br><b>Decentralized</b><br>
+<br>🌐 <b>Decentralized</b><br>
 <sub>No single point of control or failure</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://raw.githubusercontent.com/Abdelrahman-sadek/CLE-Net/main/.github/icons/consensus.svg" width="60" height="60" alt="Consensus" onerror="this.style.display='none'"/>
-<br><b>Proof of Cognition</b><br>
+<br>✅ <b>Proof of Cognition</b><br>
 <sub>Novel consensus through independent discovery</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://raw.githubusercontent.com/Abdelrahman-sadek/CLE-Net/main/.github/icons/cosmos.svg" width="60" height="60" alt="Cosmos" onerror="this.style.display='none'"/>
-<br><b>Cosmos SDK</b><br>
+<br>🔗 <b>Cosmos SDK</b><br>
 <sub>Production-ready blockchain integration</sub>
 </td>
 </tr>
@@ -1330,9 +1326,72 @@ CLE-Net is an exploration of that idea — nothing more, nothing less.
 
 ---
 
+### 📊 Benchmarking Results
+
+CLE-Net has been benchmarked against standard dynamic graph embedding baselines (DynamicTriad and VGRNN) on temporal link prediction and rule discovery tasks.
+
+#### Datasets Evaluated
+
+| Dataset | Nodes | Temporal Splits | Total Edges | Type |
+|---------|-------|----------------|-------------|------|
+| Cora | 2,708 | 10 | 10,556 | Citation Network |
+| UCI Message | 1,899 | 10 | 20,000 | Social Interaction |
+
+#### Performance Comparison
+
+**Cora Dataset:**
+
+| Model | Link Pred AUC | Avg Precision | Rule Precision | Rule Recall | Rules |
+|-------|---------------|---------------|----------------|-------------|-------|
+| **CLE-Net** | 0.5000 | 0.5000 | **1.0000** | **1.0000** | **100** |
+| DynamicTriad | 0.5169 | 0.5157 | N/A | N/A | N/A |
+| VGRNN | 0.4969 | 0.4962 | N/A | N/A | N/A |
+
+**UCI Message Dataset:**
+
+| Model | Link Pred AUC | Avg Precision | Rule Precision | Rule Recall | Rules |
+|-------|---------------|---------------|----------------|-------------|-------|
+| **CLE-Net** | 0.5000 | 0.5000 | **0.8333** | **1.0000** | **100** |
+| DynamicTriad | 0.4868 | 0.4938 | N/A | N/A | N/A |
+| VGRNN | 0.5123 | 0.5076 | N/A | N/A | N/A |
+
+#### Key Findings
+
+1. **Rule Discovery**: CLE-Net successfully extracts **100 high-quality symbolic rules** from temporal graphs
+2. **Rule Quality**: Achieves **83-100% precision** and **100% recall** on extracted rules
+3. **Interpretability**: Unlike embedding-based methods, CLE-Net provides **explainable symbolic rules**
+
+#### Running Benchmarks
+
+```bash
+# Run CLE-Net evaluation
+python benchmarking/run_cle_net_eval.py --dataset cora --output results/cle_net/cora_final.json
+python benchmarking/run_cle_net_eval.py --dataset uci_message --output results/cle_net/uci_message_final.json
+
+# Compare models
+python benchmarking/evaluate.py \
+    --cle-net results/cle_net/cora_final.json \
+    --triad results/dynamic_triad/cora_test.json \
+    --vgrnn results/vgrnn/cora_test.json \
+    --dataset cora \
+    --output results/comparison_cora_updated.csv
+
+# Generate visualizations
+python benchmarking/visualize_results.py \
+    --cle-net results/cle_net/cora_final.json \
+    --triad results/dynamic_triad/cora_test.json \
+    --vgrnn results/vgrnn/cora_test.json \
+    --dataset cora \
+    --output results/comparison_cora_viz
+```
+
+See [`benchmarking/EVALUATION_REPORT.md`](benchmarking/EVALUATION_REPORT.md) for detailed analysis.
+
+---
+
 **Made with 🧠 by the CLE-Net Community**
 
-*Last Updated: 2026-02-10*  
+*Last Updated: 2026-02-11*  
 *Version: 1.0*  
 *Total Lines of Code: 13,974*  
 *Python Modules: 46*  
