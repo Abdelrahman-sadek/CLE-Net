@@ -231,7 +231,7 @@ def compute_link_prediction_metrics(embeddings, pos_edges, neg_edges):
 def main():
     parser = argparse.ArgumentParser(description='Evaluate CLE-Net on temporal graphs')
     parser.add_argument('--dataset', type=str, default='cora',
-                        choices=['cora', 'reddit', 'uci_message'],
+                        choices=['cora', 'uci_message', 'synthetic', 'reddit'],
                         help='Dataset name')
     parser.add_argument('--output', type=str, default='results/cle_net_eval.json',
                         help='Output file for results')

@@ -38,6 +38,16 @@ dev = [
     "flake8>=5.0.0",
     "mypy>=0.990",
 ]
+ai = [
+    "openai>=1.0.0",
+    "anthropic>=0.18.0",
+]
+exe = [
+    "pyinstaller>=6.0.0",
+]
+
+[project.scripts]
+cle-net = "cle_net_cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Abdelrahman-sadek/CLE-Net"

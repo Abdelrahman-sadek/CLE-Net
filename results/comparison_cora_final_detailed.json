@@ -1,0 +1,56 @@
+{
+  "CLE-Net": {
+    "model": "CLE-Net",
+    "link_prediction": {
+      "auc": 0.5125856098867462,
+      "average_precision": 0.5130549518123013
+    },
+    "rule_discovery": {
+      "num_rules": 0,
+      "avg_support": 0,
+      "avg_confidence": 0,
+      "rule_precision": 0,
+      "rule_recall": 0.0,
+      "rule_stability_cv": 0.38656046506457664
+    }
+  },
+  "DynamicTriad": {
+    "model": "DynamicTriad",
+    "link_prediction": {
+      "auc": 0.5168967930568309,
+      "average_precision": 0.5156498719324291
+    },
+    "precision_at_k": {
+      "precision@10": 0.7,
+      "precision@50": 0.8,
+      "precision@100": 0.76
+    },
+    "recall_at_k": {
+      "recall@10": 0.004419191919191919,
+      "recall@50": 0.025252525252525252,
+      "recall@100": 0.047979797979797977
+    },
+    "temporal_stability": {
+      "mean_drift": 0,
+      "std_drift": 0
+    }
+  },
+  "VGRNN": {
+    "model": "VGRNN",
+    "link_prediction": {
+      "auc": 0.4968565867003367,
+      "average_precision": 0.4961652999477162
+    },
+    "precision_at_k": {
+      "precision@10": 0.5,
+      "precision@50": 0.52,
+      "precision@100": 0.47
+    },
+    "recall_at_k": {
+      "recall@10": 0.0031565656565656565,
+      "recall@50": 0.016414141414141416,
+      "recall@100": 0.029671717171717172
+    },
+    "variational_metrics": {}
+  }
+}

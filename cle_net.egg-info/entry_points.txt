@@ -1,0 +1,2 @@
+[console_scripts]
+cle-net = cle_net_cli:main

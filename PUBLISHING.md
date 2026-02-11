@@ -6,9 +6,11 @@ This guide provides comprehensive instructions on how to publish CLE-Net to make
 
 1. [PyPI Publishing](#pypi-publishing)
 2. [Docker Publishing](#docker-publishing)
-3. [Documentation Website](#documentation-website)
-4. [Quick Start Guide](#quick-start-guide)
-5. [Distribution Options](#distribution-options)
+3. [CLI Interface](#cli-interface)
+4. [Executable Distribution](#executable-distribution)
+5. [Documentation Website](#documentation-website)
+6. [Quick Start Guide](#quick-start-guide)
+7. [Distribution Options](#distribution-options)
 
 ---
 
@@ -264,6 +266,164 @@ docker run -d \
 
 # Or use docker-compose
 docker-compose up -d
+```
+
+---
+
+## CLI Interface
+
+CLE-Net provides a user-friendly command-line interface for normal users to interact with the system without writing code.
+
+### Features
+
+- Interactive mode for easy interaction
+- File processing for batch operations
+- AI API integration (OpenAI, Anthropic)
+- Knowledge graph querying
+- Law discovery and export
+
+### Installation
+
+```bash
+# Install with CLI support
+pip install cle-net[ai]
+```
+
+### Basic Commands
+
+```bash
+# Show help
+cle-net --help
+
+# Show version
+cle-net --version
+
+# Start interactive mode
+cle-net --interactive
+
+# Process a text file
+cle-net --file data.txt
+
+# Process text from command line
+cle-net --text "Users who request help should receive assistance"
+```
+
+### AI API Integration
+
+The CLI supports processing data from OpenAI and Anthropic APIs:
+
+```bash
+# Process data from OpenAI
+cle-net --ai-api --api-key YOUR_OPENAI_KEY --provider openai --prompt "Extract rules from this conversation"
+
+# Process data from Anthropic
+cle-net --ai-api --api-key YOUR_ANTHROPIC_KEY --provider anthropic --prompt "Analyze this document for patterns"
+```
+
+### Console Script
+
+The CLI is installed as a console script, making it available system-wide:
+
+```bash
+# After installation, the CLI is available as:
+cle-net
+```
+
+---
+
+## Executable Distribution
+
+For Windows users, you can distribute CLE-Net as a standalone executable that doesn't require Python installation.
+
+### Building the Executable
+
+#### Prerequisites
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+```
+
+#### Build Script
+
+Use the provided build script:
+
+```bash
+python build_exe.py
+```
+
+Or build manually:
+
+```bash
+# Build using PyInstaller
+pyinstaller cle_net.spec
+
+# The executable will be in the dist/ directory
+```
+
+#### PyInstaller Spec File
+
+The `cle_net.spec` file contains the configuration for building the executable:
+
+```python
+# cle_net.spec
+a = Analysis(
+    ['cle_net_cli.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        ('README.md', '.'),
+        ('LICENSE', '.'),
+    ],
+    hiddenimports=[
+        'core',
+        'core.agent',
+        'core.cosmos',
+        # ... more imports
+    ],
+)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    [],
+    name='cle-net',
+    console=True,
+)
+```
+
+### Distribution
+
+#### GitHub Releases
+
+1. Create a new release on GitHub
+2. Upload the executable from `dist/cle-net.exe`
+3. Add release notes
+
+#### User Installation
+
+Users can download the executable from the [GitHub Releases](https://github.com/Abdelrahman-sadek/CLE-Net/releases) page:
+
+```bash
+# Download and run the executable
+cle-net.exe --interactive
+
+# Or double-click the executable to start the interactive mode
+```
+
+### Cross-Platform Builds
+
+For Linux and macOS, you can build executables on those platforms:
+
+```bash
+# On Linux
+pyinstaller cle_net.spec --onefile
+
+# On macOS
+pyinstaller cle_net.spec --onefile --windowed
 ```
 
 ---

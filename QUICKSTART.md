@@ -25,6 +25,94 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+### Option 4: Install with AI Integration
+
+```bash
+pip install cle-net[ai]
+```
+
+This includes support for OpenAI and Anthropic APIs.
+
+### Option 5: Download Executable (Windows)
+
+For Windows users, you can download the standalone executable from the [GitHub Releases](https://github.com/Abdelrahman-sadek/CLE-Net/releases) page. No Python installation required!
+
+## Using the CLI Interface
+
+CLE-Net provides a user-friendly command-line interface for normal users to interact with the system without writing code.
+
+### Basic Commands
+
+```bash
+# Show help
+cle-net --help
+
+# Show version
+cle-net --version
+
+# Start interactive mode
+cle-net --interactive
+
+# Process a text file
+cle-net --file data.txt
+
+# Process text from command line
+cle-net --text "Users who request help should receive assistance"
+```
+
+### AI API Integration
+
+The CLI supports processing data from OpenAI and Anthropic APIs:
+
+```bash
+# Process data from OpenAI
+cle-net --ai-api --api-key YOUR_OPENAI_KEY --provider openai --prompt "Extract rules from this conversation"
+
+# Process data from Anthropic
+cle-net --ai-api --api-key YOUR_ANTHROPIC_KEY --provider anthropic --prompt "Analyze this document for patterns"
+```
+
+### Interactive Mode
+
+```bash
+# Start interactive mode
+cle-net --interactive
+
+# In interactive mode, you can:
+# 1. Process text input
+# 2. Process files
+# 3. Query the knowledge graph
+# 4. View discovered laws
+# 5. Export results
+```
+
+### Standalone Executable
+
+For Windows users, you can download the standalone executable from [GitHub Releases](https://github.com/Abdelrahman-sadek/CLE-Net/releases):
+
+```bash
+# Download and run the executable
+cle-net.exe --interactive
+
+# Or double-click the executable to start the interactive mode
+```
+
+The executable includes all dependencies and doesn't require Python installation.
+
+### Building the Executable
+
+To build the executable yourself:
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build the executable
+python build_exe.py
+
+# The executable will be in the dist/ directory
+```
+
 ## Your First CLE-Net Application
 
 Create a file `my_first_app.py`:

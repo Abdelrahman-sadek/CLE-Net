@@ -4,6 +4,10 @@ include requirements.txt
 include pyproject.toml
 include PUBLISHING.md
 include DEPLOYMENT_AND_TESTING.md
+include QUICKSTART.md
+include cle_net_cli.py
+include cle_net.spec
+include build_exe.py
 recursive-include core *.py
 recursive-include docs *.md
 recursive-include examples *.py

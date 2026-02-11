@@ -136,7 +136,14 @@ class CLEAgent:
         Returns:
             List of extracted atoms
         """
-        atoms = self.atomizer.extract(event.raw_content)
+        semantic_atoms = self.atomizer.extract(event.raw_content)
+        # Convert SemanticAtom objects to dictionaries
+        atoms = []
+        for atom in semantic_atoms:
+            if hasattr(atom, '__dict__'):
+                atoms.append(atom.__dict__)
+            else:
+                atoms.append(atom)
         self.state.symbol_buffer.extend(atoms)
         return atoms
     

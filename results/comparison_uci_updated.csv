@@ -1,0 +1,4 @@
+Dataset,Model,Link Pred AUC,Avg Precision,Rule Precision,Rule Recall,Rule Stability
+uci_message,CLE-Net,0.5,0.5,0.8333333333333331,1.0,0.4845093056477181
+uci_message,DynamicTriad,0.48681633333333335,0.49380958722412804,N/A,N/A,1
+uci_message,VGRNN,0.5122857777777778,0.5076325089746307,N/A,N/A,N/A
