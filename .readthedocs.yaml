@@ -1,0 +1,48 @@
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+  apt_packages:
+    - graphviz
+
+sphinx:
+  configuration: docs/conf.py
+  fail_on_warning: false
+
+python:
+  install:
+    - requirements: requirements.txt
+    - path: .
+
+# Documentation structure
+# The docs/ directory contains:
+# - Architecture docs (docs/architecture/)
+# - Cosmos docs (docs/cosmos/)
+# - Protocol docs (docs/protocols/)
+# - Whitepaper (docs/whitepaper/)
+# - Glossary (docs/glossary.md)
+
+# Submodules support (if using Git submodules)
+# submodules:
+#   include:
+#     - path/to/submodule
+
+# External dependencies
+# external_resources:
+#   - "Python Package: requests", "https://docs.python-requests.org/"
+
+# Internationalization
+# i18n:
+#   default_language_code: en
+#   default_language: en
+
+# Multiple versions support
+# versions:
+#   - type: git
+#     name: /.*/
+#     identifier: /.*/

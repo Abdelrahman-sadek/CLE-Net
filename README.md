@@ -8,16 +8,17 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-green.svg)](https://www.python.org/downloads/)
+[![Read the Docs](https://img.shields.io/badge/docs-Read%20the%20Docs-blue.svg)](https://cle-net.readthedocs.io/)
 [![Phase](https://img.shields.io/badge/phase-5%20Cosmos%20SDK-orange.svg)](ROADMAP.md)
 [![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](ROADMAP.md)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
 [![Code](https://img.shields.io/badge/code-14k%20lines-blue.svg)](#-project-statistics)
-[![Docs](https://img.shields.io/badge/docs-comprehensive-informational.svg)](docs/)
+[![Docs](https://img.shields.io/badge/docs-comprehensive-informational.svg)](https://cle-net.readthedocs.io/)
 [![Modules](https://img.shields.io/badge/modules-46%20files-purple.svg)](#-codebase-metrics)
 [![GitHub Stars](https://img.shields.io/github/stars/Abdelrahman-sadek/CLE-Net?style=social)](https://github.com/Abdelrahman-sadek/CLE-Net/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Abdelrahman-sadek/CLE-Net?style=social)](https://github.com/Abdelrahman-sadek/CLE-Net/network/members)
 
-[Quick Start](#-quick-start) • [Documentation](#-documentation) • [Architecture](#-architecture) • [Contributing](#-contributing) • [Roadmap](#-roadmap) • [Demo](#-demo)
+[Quick Start](#-quick-start) • [Documentation](https://cle-net.readthedocs.io/) • [Architecture](#-architecture) • [Contributing](#-contributing) • [Roadmap](#-roadmap) • [Demo](#-demo)
 
 ---
 
