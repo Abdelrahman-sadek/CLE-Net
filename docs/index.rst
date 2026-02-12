@@ -18,11 +18,11 @@ CLE-Net is an experimental decentralized architecture for autonomous cognitive a
    :caption: Contents:
 
    Getting Started <self>
-   glossary
-   architecture/index
-   cosmos/index
-   protocols/index
-   whitepaper/index
+   glossary.md
+   architecture/index.rst
+   cosmos/index.rst
+   protocols/index.rst
+   whitepaper/index.rst
 
 Quick Start
 -----------
