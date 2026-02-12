@@ -1,0 +1,34 @@
+# Build artifacts
+build/
+dist/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Documentation
+docs/_build/
+CLE.bfg-report/
+
+# Executable
+cle-net.exe
