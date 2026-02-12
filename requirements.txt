@@ -1,7 +1,6 @@
 # CLE-Net Requirements
 
 # Core dependencies
-python >= 3.9
 
 # No external dependencies for core MVP
 # All modules use standard library only
